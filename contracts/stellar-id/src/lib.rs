@@ -397,7 +397,7 @@ impl StellarIdContract {
         if credential.revoked {
             panic!("Cannot renew a revoked credential");
         }
-        if additional_seconds <= 0 {
+        if additional_seconds == 0 {
             panic!("Additional seconds must be greater than zero");
         }
 
